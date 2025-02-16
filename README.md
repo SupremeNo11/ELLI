@@ -26,7 +26,7 @@ This is a experiment of Low Lightting image Enhencement
   <div align="center">
   $\text{SSIM}(x, y) = \frac{(2\mu_x\mu_y + C_1)(2\sigma_{xy} + C_2)}{(\mu_x^2 + \mu_y^2 + C_1)(\sigma_x^2 + \sigma_y^2 + C_2)}$
   </div>
-  - \(\mu\)为均值，\(\sigma\)为方差，\(\sigma_{xy}\)为协方差，\(C_1, C_2\)为稳定常数。
+- $\mu$ 为均值， $\sigma$为方差， $\sigma_{xy}$ 为协方差， $C_1$, $C_2$ 为稳定常数。
 - **特点**：
   - **优点**：更符合人类视觉系统（HVS），对结构信息敏感。
   - **缺点**：对低照度下局部对比度变化和复杂纹理的评估可能不足。
@@ -39,7 +39,7 @@ This is a experiment of Low Lightting image Enhencement
   <div align="center">
   $\text{LPIPS} = \sum_{l} \frac{1}{H_lW_l} \sum_{h,w} \| \phi_l(I_{\text{ref}})_{h,w} - \phi_l(I_{\text{enh}})_{h,w} \|_2^2$
   </div>
-  - \(\phi_l\)为第\(l\)层网络特征图，\(H_l, W_l\)为特征图尺寸。
+  - $\phi_l$为第 $l$ 层网络特征图， $H_l, W_l$为特征图尺寸。
 - **特点**：
   - **优点**：捕捉高层次语义差异，与人类主观评分高度相关。
   - **缺点**：依赖预训练模型，计算成本高，对低照度图像的特征提取可能不稳定。
@@ -52,7 +52,7 @@ This is a experiment of Low Lightting image Enhencement
   <div align="center">
   $\text{NIQE} = \sqrt{(\nu_{\text{test}} - \nu_{\text{natural}})^T \Sigma^{-1} (\nu_{\text{test}} - \nu_{\text{natural}})}$
   </div>
-  - \(\nu\)为特征向量，\(\Sigma\)为协方差矩阵。
+  - $\nu$为特征向量， $\Sigma$为协方差矩阵。
 - **特点**：
   - **优点**：无需参考图像，适合实际低照度场景。
   - **缺点**：对训练数据敏感，低照度下特征统计可能偏离自然图像假设。
