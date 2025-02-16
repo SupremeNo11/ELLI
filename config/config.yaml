@@ -1,0 +1,9 @@
+root: "./data"
+pic_save_path: "./output/pic"
+is_save_pic: True
+metric_save_path: "./output/csv/metric.csv"
+
+
+LIME:
+  gamma: 0.6
+  lambda_: 0.15
